@@ -1,0 +1,24 @@
+<div
+  fxLayout="row wrap"
+  fxLayoutGap="10"
+  infiniteScroll
+  (scrolled)="getPhotos()"
+>
+  <mat-card class="main-card" *ngFor="let act of actress">
+    <mat-card-header>
+      <div mat-card-avatar class="main-header-image"
+           style="background-image: url({{mainUrl + act.field_photo_image_section}})">
+      </div>
+      <mat-card-title>{{act.nid}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image
+         src="{{mainUrl + act.ImageStyle_thumbnail}}"
+         alt="{{act.title}}">
+    <mat-card-content>
+      <p>
+        {{act.title}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>
