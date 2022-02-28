@@ -3,7 +3,6 @@ import {
   OnInit,
 } from '@angular/core';
 import {ServerService} from "./server.service";
-import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'thp-root',
